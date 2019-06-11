@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+import Form from './components/Form';
+import InforCharacter from './components/InfoCharacter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+  const [data, setData] = useState([]);
+ 
+  useEffect(() => {
+    const fetchData = async () => {
+      
+      try {
+        const result = await axios(
+          'https://swapi.co/api/people/',
+        );
+        console.log(result.data.results);
+        setData(result.data.results);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  
+    return (
+      <div className="App color-black justify-content-center">
+        <header className="App-header">
+          <h1 className="App-title color-white center">STAR WARS</h1>
+          <h1 className="App-subtitle color-white center">PERSONAJES</h1>
+        </header>
+        <Form data={data} /> 
+        <InforCharacter data={data} />  
+      </div>
+    );
+  
 }
+
 
 export default App;

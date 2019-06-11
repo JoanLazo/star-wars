@@ -1,33 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i&display=swap');
 .App {
-  text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.color-white{
+    color: rgb(255, 255, 255);
+}
+.App-title {
+ font-size: 100px;
+ font-weight: 30px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App-subtitle {
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.color-black {
+    background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.body{
+    background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center {
+    text-align: center;
+    margin-left: 3%;
+}
+
+.input {
+    background: transparent;
+    border: 1px solid rgba(7, 93, 128, 0.603);
+    width: 400px;
+    height: 30px;
+    margin-left: 35%;
+    color: white;
+}
+
+.cards {
+    background: #56CCF2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ width: 100px;
+ height: 150px;
+
+}
+
+.hero-title{
+    font-size: 30px;
+}
+.body-character {
+    border: 1px solid rgb(168, 36, 36);
+    padding: 30px;
+}
+.btn-volver {
+    background: transparent;
+    color: aliceblue;
+    border: none;
+}
+
+.link {
+    list-style: none;
+    text-decoration: none;
+}
+.text-center {
+    text-align: center;
+}
+
+.btn-detalle{
+    margin-left: 120px;
+    margin-top: 50px; 
 }
